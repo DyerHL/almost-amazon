@@ -4,7 +4,9 @@ import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
 import domEvents from '../events/domEvents';
 import navigationEvents from '../events/navigationEvents';
-import getBooks from '../helpers/data/bookData';
+import { getBooks } from '../helpers/data/bookData';
+// import { showAuthors } from '../components/authors';
+// import getAuthors from '../helpers/data/authorData';
 
 const startApp = () => {
   domBuilder(); // BUILD THE DOM
@@ -14,6 +16,7 @@ const startApp = () => {
   navigationEvents(); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
   // Put all books on the DOM
   getBooks().then((books) => showBooks(books));
+  // getAuthors().then((authorsArray) => showAuthors(authorsArray));
 };
 
 export default startApp;
