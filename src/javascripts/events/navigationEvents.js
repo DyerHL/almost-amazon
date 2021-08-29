@@ -1,7 +1,7 @@
 import { showBooks } from '../components/books';
 import signOut from '../helpers/auth/signOut';
-import { getAuthors } from '../helpers/data/authorData';
-import { getBooks } from '../helpers/data/bookData';
+import { getAuthors, filterAuthors } from '../helpers/data/authorData';
+import { booksOnSale, getBooks } from '../helpers/data/bookData';
 import { showAuthors } from '../components/authors';
 
 // navigation events
@@ -12,12 +12,12 @@ const navigationEvents = () => {
 
   // BOOKS ON SALE
   document.querySelector('#sale-books').addEventListener('click', () => {
-    console.warn('Sale Books');
+    booksOnSale().then((booksArray) => showBooks(booksArray));
   });
 
   // ALL BOOKS
   document.querySelector('#all-books').addEventListener('click', () => {
-    getBooks().then((booksArray) => booksArray(showBooks));
+    getBooks().then((booksArray) => showBooks(booksArray));
   });
 
   // SEARCH
@@ -42,6 +42,11 @@ const navigationEvents = () => {
   // 1. When a user clicks the authors link, make a call to firebase to get all authors
   // 2. Convert the response to an array because that is what the makeAuthors function is expecting
   // 3. If the array is empty because there are no authors, make sure to use the emptyAuthor function
+
+  // FILTER AUTHORS
+  document.querySelector('#fav-authors').addEventListener('click', () => {
+    filterAuthors().then((authorsArray) => showAuthors(authorsArray));
+  });
 };
 
 export default navigationEvents;
