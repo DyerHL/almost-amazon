@@ -1,8 +1,7 @@
+import clearDom from '../helpers/clearDom';
+
 const showAuthors = (array) => {
-  document.querySelector('#store').innerHTML = '';
-  // CREATE A BUTTON TO ADD Author
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add An Author</button>';
-  document.querySelector('#form-container').innerHTML = '';
+  clearDom();
 
   array.forEach((item) => {
     // FIXME: STUDENTS create cards for your authors
@@ -11,6 +10,7 @@ const showAuthors = (array) => {
     <div class="card-body">
       <h5 class="card-title">${item.first_name} ${item.last_name}</h5>
       <h6 class="card-subtitle mb-2 text-muted" id="email">${item.email}</h6>
+      <i class="btn btn-success fas fa-eye" id="view-author-btn--${item.firebaseKey}"></i>
       <button type="button" class="btn btn-info" id="edit-author--${item.firebaseKey}">Edit</button>
       <button type="button" class="btn btn-danger" id="delete-author--${item.firebaseKey}">Delete</button>
     </div>

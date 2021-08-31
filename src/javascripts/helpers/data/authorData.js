@@ -55,11 +55,18 @@ const filterAuthors = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const getAuthorsBooks = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/books.json?orderBy="author_id"&equalTo="${firebaseKey}"`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch((error) => reject(error));
+});
+
 export {
   getAuthors,
   createAuthor,
   filterAuthors,
   deleteAuthor,
   updateAuthor,
-  getSingleAuthor
+  getSingleAuthor,
+  getAuthorsBooks
 };
