@@ -4,7 +4,8 @@
     "first_name": "Rosmunda",
     "last_name": "Avann",
     "email": "ravann1j@smugmug.com",
-    "favorite": false
+    "favorite": false,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Queen_Elizabeth_II_in_March_2015.jpg"
   },
   "-MTpcli9kmjpvbdr-ckb": {
     "firebaseKey": "-MTpcli9kmjpvbdr-ckb",
@@ -32,7 +33,8 @@
     "first_name": "Lorette",
     "last_name": "Clamo",
     "email": "lclamo1n@imgur.com",
-    "favorite": false
+    "favorite": false,
+    "image": "https://images.7news.com.au/publication/C-2243293/5c19182e6948973a0e83f801827cd30b15527202.jpg?imwidth=650&impolicy=sevennews_v2"
   },
   "-MTpcliGnhDSsyvILIoJ": {
     "firebaseKey": "-MTpcliGnhDSsyvILIoJ",
