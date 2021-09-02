@@ -1,5 +1,5 @@
-import { getSingleAuthor, getAuthorsBooks } from './authorData';
-import { getSingleBook } from './bookData';
+import { getSingleAuthor, getAuthorsBooks, deleteAuthor } from './authorData';
+import { getSingleBook, deleteBook } from './bookData';
 
 const viewBookDetails = (firebaseKey) => new Promise((resolve, reject) => {
   getSingleBook(firebaseKey)
@@ -21,4 +21,11 @@ const viewAuthorDetails = (firebaseKey) => new Promise((resolve, reject) => {
     }).catch(reject);
 });
 
-export { viewBookDetails, viewAuthorDetails };
+const deleteAuthorBooks = (authorId) => new Promise((resolve, reject) => {
+  getAuthorsBooks(authorId).then((authorsBookArray) => {
+    const deleteBooks = authorsBookArray.map((book) => deleteBook(book.firebaseKey));
+    Promise.all(deleteBooks).then(() => resolve(deleteAuthor(authorId)));
+  }).catch(reject);
+});
+
+export { viewBookDetails, viewAuthorDetails, deleteAuthorBooks };
