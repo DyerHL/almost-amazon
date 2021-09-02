@@ -9,14 +9,13 @@ import {
 import { showBooks } from '../components/books';
 import {
   createAuthor,
-  deleteAuthor,
   updateAuthor,
   getSingleAuthor
 } from '../helpers/data/authorData';
 import { showAuthors } from '../components/authors';
 import viewBook from '../components/viewBook';
 import viewAuthor from '../components/viewAuthors';
-import { viewBookDetails, viewAuthorDetails } from '../helpers/data/mergedData';
+import { viewBookDetails, viewAuthorDetails, deleteAuthorBooks } from '../helpers/data/mergedData';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -82,7 +81,7 @@ const domEvents = () => {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const [, id] = e.target.id.split('--');
-        deleteAuthor(id).then(showAuthors);
+        deleteAuthorBooks(id).then(showAuthors);
       }
     }
 
@@ -95,10 +94,11 @@ const domEvents = () => {
     if (e.target.id.includes('submit-author')) {
       e.preventDefault();
       const authorObj = {
-        image: document.querySelector('#image').value,
         email: document.querySelector('#email').value,
         first_name: document.querySelector('#first_name').value,
-        last_name: document.querySelector('#last_name').value
+        last_name: document.querySelector('#last_name').value,
+        favorite: document.querySelector('#favorite').checked,
+        quote: document.querySelector('#quote').value
       };
 
       createAuthor(authorObj).then((authorsArray) => showAuthors(authorsArray));
@@ -123,10 +123,11 @@ const domEvents = () => {
       const [, firebaseKey] = e.target.id.split('--');
       console.warn(firebaseKey);
       const authorObj = {
-        image: document.querySelector('#image').value,
         email: document.querySelector('#email').value,
         first_name: document.querySelector('#first_name').value,
         last_name: document.querySelector('#last_name').value,
+        favorite: document.querySelector('#favorite').checked,
+        quote: document.querySelector('#quote').value,
         firebaseKey
       };
       updateAuthor(authorObj).then(showAuthors);

@@ -13,20 +13,23 @@ const viewAuthor = (obj) => {
      </div>
      <div class="text-white ms-5 details">
        <h5>${obj.first_name} ${obj.last_name}</h5>
+       <div class="quotes-styles">
+       <p>Quote: ${obj.quote || ''}</p>
+     </div>
        <p>${obj.description || ''}</p>
        <hr>
        <p>${obj.email || ''}</p>    
        <hr>
        <p>Books written by this author:</p>
-       <div id="authors-books"></div>  
+       <div class="mt-5 d-flex flex-wrap" id="authors-books"></div>  
       </div>
+
     </div>`;
 
   obj.book.forEach((book) => {
     document.querySelector('#authors-books').innerHTML += `
-    <div class="card">
-      <img class="card-img-top" src=${book.image} alt=${book.title} style="height: 200px;">
-      <p>${book.title}</p>
+    <div class="authorsbooks-card" style="width: 150px;">
+      <img class="card-img-top" src=${book.image} alt=${book.title} style="width: 150px;">
     </div>
         `;
   });

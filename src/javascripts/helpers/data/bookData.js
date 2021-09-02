@@ -47,6 +47,17 @@ const updateBook = (bookObj) => new Promise((resolve, reject) => {
 });
 
 // SEARCH BOOKS
+const searchBooks = (searchValue) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/books.json?orderBy="title"&equalTo="${searchValue}"`)
+    .then((response) => resolve(Object.values(response.data)))
+    .catch(reject);
+});
+
+// const searchBooks = async (searchValue) => {
+//   const booksArray = await getBooks();
+//   const searchReturn = booksArray.filter((book) => (book.title).toLowerCase().includes(searchValue));
+//   return searchReturn;
+// };
 
 // FILTER BOOKS ON SALE
 const booksOnSale = () => new Promise((resolve, reject) => {
@@ -61,5 +72,6 @@ export {
   createBook,
   booksOnSale,
   deleteBook,
-  updateBook
+  updateBook,
+  searchBooks
 };
