@@ -1,80 +1,46 @@
-# Almost Amazon
-We are building an admin app that allows a store owner to login to the app and manage books and authors.
+# Almost Amazon  [![Netlify Status](https://api.netlify.com/api/v1/badges/011e8031-681a-433e-8471-44d18e368526/deploy-status)](https://app.netlify.com/sites/hld-almost-amazon/deploys)
 
-[Deployed Sample](https://almost-amazon-sample.netlify.app/) (PLEASE DO NOT DELETE my books ;-))
+## About the User
+- The user of this app wants to keep track of books and authors of interest 
 
-![Screen Shot](./almostam.png)
+## Features
+- The user is able to add authors and books to their personal database.
+- The user can view the books and book details, as well author's details. 
+- The user is also able to edit and delete the books and authors.
+- Users are able to filter books by "on sale" and authors by "favorites".
 
-We will be learning about the following:
-- XHR requests
-- Promises
-- Firebase
-- ERDs
-- Postman
-- CRUD
+## Video Walkthrough of Almost Amazon
 
-## Get Started
-- Clone your repo
-- Install app dependencies: `npm i`
-- Start your server: `npm start`
-  - The server starts the only error you should see is this one (which will be fixed after the Firebase Walkthrough is completed):
-    ```js
-    {
-      code: "auth/invalid-api-key",
-      message: "Your API key is invalid, please check you have copied it correctly.",
-      a: null
-    }
-    ```
-- Change `.sample.env` file name to `.env`
+https://www.loom.com/share/87aedff1611a4b0491de965326485ab4
 
+## Code Snippet 
+```javascript
 
-## TODO 1 - Get Setup
-In preparation for next week, complete the following in lab:
-- [Firebase Walkthrough Videos ~15 minutes](https://vimeo.com/showcase/codetracker-firebase) PW: `firebaseRules!`
-  - Create a project called `Almost Amazon`
-  - Add a Realtime Database
-  - Create an app called `Almost Amazon`
-  - Add Auth
-  - Add the Keys to your `.env` file
-  - Upload the sample data to Firebase
-- Test the Firebase Setup
-  - Start and stop your server
-  - Go to the application it should look like this:
- 
-  <img src="documentation/Login Screen.png" alt="Login Screen" width="300px"/>
- 
-  - The API key error should also be gone
-  - Clicking the button should open up a Google Popup. Select a user to sign in with.
+const createAuthor = (authorObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/authors.json`, authorObj)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/authors/${response.data.name}.json`, body)
+        .then(() => {
+          getAuthors(authorObj.uid).then((authorsArray) => resolve(authorsArray));
+        });
+    }).catch((error) => reject(error));
+});
 
-  <img src="documentation/Google Pop-Up.png" alt="Google Pop-Up Screen" width="300px"/>
-    
-  - After signing in, there should be a Navbar
-    - If your screen size is small, the Navbar might be collapsed like in the image below. Click on the hamburger button to open it.
- 
-  <img src="documentation/Logged In Screen.png" alt="Logged In Screen" width="300px"/>
-  
-  - Click on the Log Out Button
+```
+## ScreenShots
 
- 
-  <img src="documentation/Logout Button.png" alt="Logout Button Screen" width="300px"/>    
-  
-  - This should bring back the Login Button
-
-## TODO 2 - Look at the Code...
-  - Take a look at the layout of the application. Start in `main.js` and follow the flow to get up to speed.
-    - Look at the components, events, helpers, and views
-    - Checkout `main.scss` 
-
-## TODO 3 - Installs
-- Install [Postman](https://www.postman.com/downloads/)
+![image](https://user-images.githubusercontent.com/86806913/137208903-c395c985-816d-444c-acf5-fe555877749b.png)
+<br>
+![image](https://user-images.githubusercontent.com/86806913/137208952-737ed744-9ba2-41f6-b05a-f4862dd62e1c.png)
+<br>
+![image](https://user-images.githubusercontent.com/86806913/137209174-f21f1aa4-21c3-43c5-ab95-087dd69e4eed.png)
 
 
+## Relevent Links
+- [View App](hld-almost-amazon.netlify.app)
 
-## Technologies used
-- Javascript
-- Firebase Auth
-- Firebase Realtime Database
-- Axios for XHR requests
-- SASS (For your own exploration)
-- Bootstrap
-- Webpack
+## Author
+[Halie Dyer](https://github.com/DyerHL)
+
+
