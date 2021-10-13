@@ -1,56 +1,82 @@
 {
-  "-MTpclfzY9GLtKDsDYTs": {
-    "firebaseKey": "-MTpclfzY9GLtKDsDYTs",
-    "price": 25.99,
-    "description": "",
-    "title": "Fifty Shades of Chicken",
-    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fchicken.jpg?alt=media&token=77e7cf36-4f72-4ee0-a487-dd1d366ced63",
-    "sale": false,
-    "author_id": "-MTpcli73mfiIqW0lpPe"
+  "-MiTv_alMqphmdDyj4qS" : {
+    "author_id" : "-MiTxlfmZ6aegOJvkfRH",
+    "description" : "When Elinor Dashwood's father dies, her family's finances are crippled. After the Dashwoods move to a cottage in Devonshire, Elinor's sister Marianne is torn between the handsome John Willoughby and the older Colonel Brandon. Meanwhile, Elinor's romantic hopes with Edward Ferrars are hindered due to his prior engagement. Both Elinor and Marianne strive for love while the circumstances in their lives constantly change.",
+    "firebaseKey" : "-MiTv_alMqphmdDyj4qS",
+    "image" : "https://i.pinimg.com/originals/c7/8e/6f/c78e6f287b173fd7d0c535d12a66bd2a.jpg",
+    "price" : "25",
+    "sale" : false,
+    "title" : "Sense and Sensibility",
+    "uid" : ""
   },
-  "-MTpclg-BDWqEqyNcYzx": {
-    "firebaseKey": "-MTpclg-BDWqEqyNcYzx",
-    "price": 15.45,
-    "description": "",
-    "title": "Fifty Shades of Bacon",
-    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fbacon.jpg?alt=media&token=4641983b-59a5-4d1f-8e8e-7f2114f02455",
-    "sale": true,
-    "author_id": "-MTpcli9kmjpvbdr-ckb"
+  "-MiTwXl9Ovrlt70RlhqX" : {
+    "author_id" : "-MiTxlfmZ6aegOJvkfRH",
+    "description" : "Catherine Morland, the daughter of a rural clergyman, is taken to Bath for the season by family friends and once there, she meets Henry Tilney. As a result of exaggerated reports of her family's wealth, Catherine is invited to Northanger Abbey, the medieval seat of the Tilneys. Henry's father then receives a second report - as misleading as the first - representing Catherine's parents as extremely humble.",
+    "firebaseKey" : "-MiTwXl9Ovrlt70RlhqX",
+    "image" : "https://cdn2.penguin.com.au/covers/original/9780141197715.jpg",
+    "price" : "25",
+    "sale" : false,
+    "title" : "Northanger Abbey",
+    "uid" : ""
   },
-  "-MTpclg1yedrHyxkTEvt": {
-    "firebaseKey": "-MTpclg1yedrHyxkTEvt",
-    "price": 5,
-    "description": "",
-    "title": "Fifty Shades of Kale",
-    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fkale.jpg?alt=media&token=cce4b2dc-4ee5-4e80-93a3-c33d3817880e",
-    "sale": false,
-    "author_id": "-MTpcliA_-GtWZHpb8sf"
+  "-MiTxCTeCMVwyogL_Kkg" : {
+    "author_id" : "-MiTxxoz3ukhGF5zeYPB",
+    "description" : "First in the Song of Ice and Fire Series",
+    "firebaseKey" : "-MiTxCTeCMVwyogL_Kkg",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/91dSMhdIzTL.jpg",
+    "price" : "30",
+    "sale" : false,
+    "title" : "A Game of Thrones",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   },
-  "-MTpclg3RLFK-14Pu-YM": {
-    "firebaseKey": "-MTpclg3RLFK-14Pu-YM",
-    "price": 2,
-    "description": "",
-    "title": "Fifteen Shades for Grey",
-    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fanimals.jpeg?alt=media&token=bf85ace1-db04-42c1-82d5-56ce58979721",
-    "sale": false,
-    "author_id": "-MTpcliCeUeUNMpZ-Kog"
+  "-MiTy_CeDfY4S7RVD2Gf" : {
+    "author_id" : "-MiTxxoz3ukhGF5zeYPB",
+    "description" : "Second in the Song of Ice and Fire Series",
+    "firebaseKey" : "-MiTy_CeDfY4S7RVD2Gf",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/51c2P9MntrL._SX298_BO1,204,203,200_.jpg",
+    "price" : "30",
+    "sale" : false,
+    "title" : "A Clash of Kings",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   },
-  "-MTpclg6Ax7Lg5iq3tOs": {
-    "firebaseKey": "-MTpclg6Ax7Lg5iq3tOs",
-    "price": 50,
-    "description": "",
-    "title": "Fifty Shades of Zombie",
-    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fzombie.jpg?alt=media&token=4e350713-95ba-4dc6-8091-c2fd5bb2bb27",
-    "sale": true,
-    "author_id": "-MTpcliDmrp15A1WIE4U"
+  "-MiTyxwJwb8BqHew6lF_" : {
+    "author_id" : "-MiTxxoz3ukhGF5zeYPB",
+    "description" : "Third in the Song of Ice and Fire Series ",
+    "firebaseKey" : "-MiTyxwJwb8BqHew6lF_",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/91-KBK-9K2L.jpg",
+    "price" : "30",
+    "sale" : false,
+    "title" : "A Storm of Swords",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   },
-  "-MTpclg4KKMZ4FUaEE2b": {
-    "firebaseKey": "-MTpclg4KKMZ4FUaEE2b",
-    "price": 0.75,
-    "description": "",
-    "title": "Fifty Shades of Gravy",
-    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fgravy.jpg?alt=media&token=1cdec29d-f7d5-4100-bd09-684fe57235e4",
-    "sale": false,
-    "author_id": "-MTpcliGnhDSsyvILIoJ"
+  "-MiTzGYcwZJdDQvgAA3u" : {
+    "author_id" : "-MTpcliGnhDSsyvILIoJ",
+    "description" : "Told through the eyes of Scout Finch, you learn about her father Atticus Finch, an attorney who hopelessly strives to prove the innocence of a black man unjustly accused of rape; and about Boo Radley, a mysterious neighbor who saves Scout and her brother Jem from being killed.",
+    "firebaseKey" : "-MiTzGYcwZJdDQvgAA3u",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/51N5qVjuKAL._SX309_BO1,204,203,200_.jpg",
+    "price" : "17",
+    "sale" : true,
+    "title" : "To Kill a Mockingbird",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
+  },
+  "-MiYgMAZg4BVIL7vTGDl" : {
+    "author_id" : "-MiYg2uiSQzB4yf-lvXp",
+    "description" : "\"It\" follows the experiences of seven children as they are terrorized by an evil entity that exploits the fears of its victims to disguise itself while hunting its prey",
+    "firebaseKey" : "-MiYgMAZg4BVIL7vTGDl",
+    "image" : "https://images-na.ssl-images-amazon.com/images/I/71lZgzNE2kL.jpg",
+    "price" : "15",
+    "sale" : true,
+    "title" : "It",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
+  },
+  "-MildTUVg3aCn0MZkwmZ" : {
+    "author_id" : "-Mild-HamWfEA5-4LOZQ",
+    "description" : "Jonny's honest writings about his struggles with feeling productive, as well as his difficulties with anxiety and depression will connect deeply with his fans as well as anyone attempting to create in our chaotic world.",
+    "firebaseKey" : "-MildTUVg3aCn0MZkwmZ",
+    "image" : "https://media.npr.org/assets/img/2021/04/09/71dc0lzkojl_custom-4ab9ad7cff9da2a6f39a5a0fe82413a50c8b0f08.jpg",
+    "price" : "15",
+    "sale" : true,
+    "title" : "Goodbye, Again",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   }
 }

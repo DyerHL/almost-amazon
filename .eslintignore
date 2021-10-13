@@ -1,3 +1,9 @@
-webpack.config.js
-node_modules
-build
+.vscode/
+.DS_Store
+package-lock.json
+node_modules/
+dist/
+build/
+dist/
+.env
+.firebase/

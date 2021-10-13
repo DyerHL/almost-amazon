@@ -1,46 +1,44 @@
 {
-  "-MTpcli73mfiIqW0lpPe": {
-    "firebaseKey": "-MTpcli73mfiIqW0lpPe",
-    "first_name": "Rosmunda",
-    "last_name": "Avann",
-    "email": "ravann1j@smugmug.com",
-    "favorite": false,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Queen_Elizabeth_II_in_March_2015.jpg"
+  "-MTpcliGnhDSsyvILIoJ" : {
+    "email" : "LeeHarper@gmail.com",
+    "favorite" : true,
+    "firebaseKey" : "-MTpcliGnhDSsyvILIoJ",
+    "first_name" : "Harper",
+    "last_name" : "Lee",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   },
-  "-MTpcli9kmjpvbdr-ckb": {
-    "firebaseKey": "-MTpcli9kmjpvbdr-ckb",
-    "first_name": "Broderic",
-    "last_name": "Dunrige",
-    "email": "bdunrige1k@symantec.com",
-    "favorite": false
+  "-MiTxlfmZ6aegOJvkfRH" : {
+    "email" : "janeausten01@gmail.com",
+    "firebaseKey" : "-MiTxlfmZ6aegOJvkfRH",
+    "first_name" : "Jane ",
+    "last_name" : "Austen",
+    "uid" : ""
   },
-  "-MTpcliA_-GtWZHpb8sf": {
-    "firebaseKey": "-MTpcliA_-GtWZHpb8sf",
-    "first_name": "Aurora",
-    "last_name": "Raddish",
-    "email": "araddish1l@liveinternet.ru",
-    "favorite": true
+  "-MiTxxoz3ukhGF5zeYPB" : {
+    "email" : "georgefromGOT@gmail.com",
+    "favorite" : true,
+    "firebaseKey" : "-MiTxxoz3ukhGF5zeYPB",
+    "first_name" : "George R R ",
+    "last_name" : "Martin",
+    "quote" : "Laughter is poison to fear.",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   },
-  "-MTpcliCeUeUNMpZ-Kog": {
-    "firebaseKey": "-MTpcliCeUeUNMpZ-Kog",
-    "first_name": "Darb",
-    "last_name": "Dyke",
-    "email": "ddyke1m@imageshack.us",
-    "favorite": true
+  "-MiYg2uiSQzB4yf-lvXp" : {
+    "email" : "stephenking@aol.com",
+    "favorite" : true,
+    "firebaseKey" : "-MiYg2uiSQzB4yf-lvXp",
+    "first_name" : "Stephen ",
+    "last_name" : "King",
+    "quote" : "Fiction is the truth inside the lie.",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   },
-  "-MTpcliDmrp15A1WIE4U": {
-    "firebaseKey": "-MTpcliDmrp15A1WIE4U",
-    "first_name": "Lorette",
-    "last_name": "Clamo",
-    "email": "lclamo1n@imgur.com",
-    "favorite": false,
-    "image": "https://images.7news.com.au/publication/C-2243293/5c19182e6948973a0e83f801827cd30b15527202.jpg?imwidth=650&impolicy=sevennews_v2"
-  },
-  "-MTpcliGnhDSsyvILIoJ": {
-    "firebaseKey": "-MTpcliGnhDSsyvILIoJ",
-    "first_name": "Mickie",
-    "last_name": "Schlagman",
-    "email": "mschlagman1o@miitbeian.gov.cn",
-    "favorite": true
+  "Mild-HamWfEA5-4LOZQ" : {
+    "email" : "jSun@gmail.com",
+    "favorite" : true,
+    "firebaseKey" : "-Mild-HamWfEA5-4LOZQ",
+    "first_name" : "Jonny",
+    "last_name" : "Sun",
+    "quote" : "A grape falls off a vine...and dries. Everything happens for a raisin.",
+    "uid" : "UIG9z6xEqETgRVgl2CPhmzPipB43"
   }
 }
