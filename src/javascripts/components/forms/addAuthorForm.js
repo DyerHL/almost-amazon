@@ -1,6 +1,6 @@
 import clearDom from '../../helpers/clearDom';
 
-const addAuthorForm = (obj = {}) => {
+const addAuthorForm = (userId, obj = {}) => {
   clearDom();
   document.querySelector('#form-container').innerHTML = `
       <form id="submit-author-form" class="mb-4">

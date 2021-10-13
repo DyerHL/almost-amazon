@@ -17,20 +17,20 @@ import viewBook from '../components/viewBook';
 import viewAuthor from '../components/viewAuthors';
 import { viewBookDetails, viewAuthorDetails, deleteAuthorBooks } from '../helpers/data/mergedData';
 
-const domEvents = () => {
+const domEvents = (userId) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     // CLICK EVENT FOR DELETING A BOOK
     if (e.target.id.includes('delete-book')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const [, id] = e.target.id.split('--');
-        deleteBook(id).then(showBooks);
+        deleteBook(id, userId).then(showBooks);
       }
     }
 
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A BOOK
     if (e.target.id.includes('add-book-btn')) {
-      addBookForm();
+      addBookForm(userId);
     }
 
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOOK
@@ -42,7 +42,8 @@ const domEvents = () => {
         price: document.querySelector('#price').value,
         description: document.querySelector('#description').value,
         sale: document.querySelector('#sale').checked,
-        author_id: document.querySelector('#author_id').value
+        author_id: document.querySelector('#author_id').value,
+        uid: userId
       };
 
       createBook(bookObj).then((booksArray) => showBooks(booksArray));
@@ -50,9 +51,8 @@ const domEvents = () => {
 
     // CLICK EVENT FOR EDITING/UPDATING A BOOK
     if (e.target.id.includes('edit-book-btn')) {
-      console.warn('CLICKED EDIT BOOK', e.target.id);
       const [, id] = e.target.id.split('--');
-      getSingleBook(id).then((bookObj) => addBookForm(bookObj));
+      getSingleBook(id).then((bookObj) => addBookForm(userId, bookObj));
     }
 
     // CLICK EVENT FOR EDITING A BOOK
@@ -66,7 +66,8 @@ const domEvents = () => {
         description: document.querySelector('#description').value,
         sale: document.querySelector('#sale').checked,
         author_id: document.querySelector('#author_id').value,
-        firebaseKey
+        firebaseKey,
+        uid: userId
       };
       updateBook(bookObj).then(showBooks);
     }
@@ -81,13 +82,13 @@ const domEvents = () => {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const [, id] = e.target.id.split('--');
-        deleteAuthorBooks(id).then(showAuthors);
+        deleteAuthorBooks(id, userId).then(showAuthors);
       }
     }
 
     // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING AN AUTHOR
     if (e.target.id.includes('add-author-btn')) {
-      addAuthorForm();
+      addAuthorForm(userId);
     }
 
     // ADD CLICK EVENT FOR SUBMITTING FORM FOR ADDING AN AUTHOR
@@ -98,7 +99,8 @@ const domEvents = () => {
         first_name: document.querySelector('#first_name').value,
         last_name: document.querySelector('#last_name').value,
         favorite: document.querySelector('#favorite').checked,
-        quote: document.querySelector('#quote').value
+        quote: document.querySelector('#quote').value,
+        uid: userId
       };
 
       createAuthor(authorObj).then((authorsArray) => showAuthors(authorsArray));
@@ -106,12 +108,11 @@ const domEvents = () => {
 
     // CLICK EVENT FOR EDITING/UPDATING AN AUTHOR
     if (e.target.id.includes('edit-author')) {
-      console.warn('CLICKED EDIT AUTHOR', e.target.id);
       const [, id] = e.target.id.split('--');
-      getSingleAuthor(id).then((authorObj) => addAuthorForm(authorObj));
+      getSingleAuthor(id).then((authorObj) => addAuthorForm(userId, authorObj));
     }
 
-    // ADD EVENT FOR VIEW AUTHOR BUTTON
+    // CLICK EVENT FOR VIEW AUTHOR BUTTON
     if (e.target.id.includes('view-author-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       viewAuthorDetails(firebaseKey).then(viewAuthor);
@@ -128,7 +129,8 @@ const domEvents = () => {
         last_name: document.querySelector('#last_name').value,
         favorite: document.querySelector('#favorite').checked,
         quote: document.querySelector('#quote').value,
-        firebaseKey
+        firebaseKey,
+        uid: userId
       };
       updateAuthor(authorObj).then(showAuthors);
     }

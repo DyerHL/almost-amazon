@@ -5,19 +5,19 @@ import { booksOnSale, getBooks, searchBooks } from '../helpers/data/bookData';
 import { showAuthors } from '../components/authors';
 
 // navigation events
-const navigationEvents = () => {
+const navigationEvents = (userId) => {
   // LOGOUT BUTTON
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
   // BOOKS ON SALE
   document.querySelector('#sale-books').addEventListener('click', () => {
-    booksOnSale().then((booksArray) => showBooks(booksArray));
+    booksOnSale(userId).then((booksArray) => showBooks(booksArray));
   });
 
   // ALL BOOKS
   document.querySelector('#all-books').addEventListener('click', () => {
-    getBooks().then((booksArray) => showBooks(booksArray));
+    getBooks(userId).then((booksArray) => showBooks(booksArray));
   });
 
   // SEARCH
@@ -32,13 +32,13 @@ const navigationEvents = () => {
 
   // AUTHORS
   document.querySelector('#authors').addEventListener('click', () => {
-    getAuthors().then(showAuthors);
+    getAuthors(userId).then(showAuthors);
     document.querySelector('#form-container').innerHTML = '';
   });
 
   // FILTER AUTHORS
   document.querySelector('#fav-authors').addEventListener('click', () => {
-    filterAuthors().then((authorsArray) => showAuthors(authorsArray));
+    filterAuthors(userId).then((authorsArray) => showAuthors(authorsArray));
   });
 };
 
